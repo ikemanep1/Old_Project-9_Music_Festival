@@ -85,9 +85,9 @@ describe '#Artist' do
      stage2.save
      artist = Artist.new("Prince", @stage.id, nil)
      artist.save()
-     artist2 = Artist.new("Tycho", stage2.id, nil)
+     artist2 = Artist.new("Tycho", @stage2.id, nil)
      artist2.save()
-     expect(Artist.find_by_stage(stage2.id)).to(eq([artist2]))
+     expect(Artist.find_by_stage(@stage2.id)).to(eq([artist2]))
    end
  end
 
